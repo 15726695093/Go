@@ -1,0 +1,23 @@
+================ Performance of 200 bytes ================
+SET: 0.00SET: 47960.16SET: 47760.48SET: 47565.91SET: 47631.37SET: 47633.09SET: 47835.44SET: 48024.55SET: 48114.45====== SET ======
+  100000 requests completed in 2.08 seconds
+  50 parallel clients
+  200 bytes payload
+  keep alive: 1
+
+98.80% <= 1 milliseconds
+100.00% <= 1 milliseconds
+48076.93 requests per second
+
+GET: 48195.12GET: 47647.34GET: 47701.81GET: 47993.44GET: 47704.46GET: 47690.24GET: 47739.78GET: 47814.52====== GET ======
+  100000 requests completed in 2.08 seconds
+  50 parallel clients
+  200 bytes payload
+  keep alive: 1
+
+98.69% <= 1 milliseconds
+99.99% <= 2 milliseconds
+100.00% <= 2 milliseconds
+48053.82 requests per second
+
+

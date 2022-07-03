@@ -1,0 +1,22 @@
+================ Performance of 1000 bytes ================
+SET: 0.00SET: 46848.61SET: 47401.20SET: 47924.10SET: 48135.86SET: 48310.15SET: 48347.77SET: 48125.64SET: 48132.43====== SET ======
+  100000 requests completed in 2.08 seconds
+  50 parallel clients
+  1000 bytes payload
+  keep alive: 1
+
+99.01% <= 1 milliseconds
+100.00% <= 1 milliseconds
+48146.37 requests per second
+
+GET: 47000.00GET: 48093.98GET: 47781.95GET: 47806.55GET: 47895.28GET: 48180.21GET: 48270.87GET: 48122.20====== GET ======
+  100000 requests completed in 2.08 seconds
+  50 parallel clients
+  1000 bytes payload
+  keep alive: 1
+
+98.92% <= 1 milliseconds
+100.00% <= 1 milliseconds
+48053.82 requests per second
+
+

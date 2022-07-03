@@ -1,0 +1,26 @@
+================ Performance of 10 bytes ================
+SET: 0.00SET: 48290.84SET: 48345.31SET: 48006.66SET: 47766.23SET: 47868.90SET: 48091.94SET: 48145.63SET: 48398.80====== SET ======
+  100000 requests completed in 2.06 seconds
+  50 parallel clients
+  10 bytes payload
+  keep alive: 1
+
+98.07% <= 1 milliseconds
+99.91% <= 2 milliseconds
+99.95% <= 4 milliseconds
+99.96% <= 5 milliseconds
+99.99% <= 6 milliseconds
+100.00% <= 6 milliseconds
+48496.61 requests per second
+
+GET: 49617.98GET: 50214.95GET: 50516.23GET: 50336.21GET: 49954.16GET: 49749.30GET: 49696.07GET: 49625.00====== GET ======
+  100000 requests completed in 2.02 seconds
+  50 parallel clients
+  10 bytes payload
+  keep alive: 1
+
+99.27% <= 1 milliseconds
+100.00% <= 1 milliseconds
+49554.02 requests per second
+
+

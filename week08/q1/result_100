@@ -1,0 +1,23 @@
+================ Performance of 100 bytes ================
+SET: 0.00SET: 47669.32SET: 48732.54SET: 48201.07SET: 48586.41SET: 48313.35SET: 48382.41SET: 48526.55SET: 48661.17====== SET ======
+  100000 requests completed in 2.05 seconds
+  50 parallel clients
+  100 bytes payload
+  keep alive: 1
+
+99.18% <= 1 milliseconds
+99.99% <= 2 milliseconds
+100.00% <= 2 milliseconds
+48732.94 requests per second
+
+GET: 46600.00GET: 47606.82GET: 47330.43GET: 47693.62GET: 48089.91GET: 47820.83GET: 47808.28GET: 47808.25====== GET ======
+  100000 requests completed in 2.09 seconds
+  50 parallel clients
+  100 bytes payload
+  keep alive: 1
+
+99.03% <= 1 milliseconds
+100.00% <= 1 milliseconds
+47892.72 requests per second
+
+

@@ -1,0 +1,25 @@
+================ Performance of 50 bytes ================
+SET: -nanSET: 47557.77SET: 47219.56SET: 47395.47SET: 47342.66SET: 47498.00SET: 47712.19SET: 47793.83SET: 47969.02====== SET ======
+  100000 requests completed in 2.08 seconds
+  50 parallel clients
+  50 bytes payload
+  keep alive: 1
+
+99.01% <= 1 milliseconds
+100.00% <= 1 milliseconds
+48030.74 requests per second
+
+GET: 50068.32GET: 49530.41GET: 49063.54GET: 48987.93GET: 48826.87GET: 48900.07GET: 49095.12GET: 49024.59====== GET ======
+  100000 requests completed in 2.04 seconds
+  50 parallel clients
+  50 bytes payload
+  keep alive: 1
+
+99.08% <= 1 milliseconds
+99.94% <= 2 milliseconds
+99.95% <= 5 milliseconds
+99.98% <= 6 milliseconds
+100.00% <= 6 milliseconds
+48995.59 requests per second
+
+

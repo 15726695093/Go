@@ -1,0 +1,24 @@
+================ Performance of 20 bytes ================
+SET: 0.00SET: 48167.33SET: 48241.52SET: 48427.43SET: 48269.73SET: 48336.53SET: 48329.11SET: 48131.92SET: 48116.94====== SET ======
+  100000 requests completed in 2.08 seconds
+  50 parallel clients
+  20 bytes payload
+  keep alive: 1
+
+98.46% <= 1 milliseconds
+99.97% <= 2 milliseconds
+100.00% <= 2 milliseconds
+48030.74 requests per second
+
+GET: 49285.71GET: 48216.54GET: 48409.98GET: 48760.70GET: 48970.71GET: 49085.05GET: 48790.49GET: 48786.50====== GET ======
+  100000 requests completed in 2.05 seconds
+  50 parallel clients
+  20 bytes payload
+  keep alive: 1
+
+99.14% <= 1 milliseconds
+99.99% <= 2 milliseconds
+100.00% <= 2 milliseconds
+48780.49 requests per second
+
+

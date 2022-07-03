@@ -1,0 +1,29 @@
+================ Performance of 5000 bytes ================
+SET: 0.00SET: 46972.11SET: 46920.16SET: 46495.34SET: 46444.55SET: 46538.77SET: 46354.43SET: 46315.82SET: 46176.91====== SET ======
+  100000 requests completed in 2.17 seconds
+  50 parallel clients
+  5000 bytes payload
+  keep alive: 1
+
+97.71% <= 1 milliseconds
+99.95% <= 2 milliseconds
+99.98% <= 3 milliseconds
+100.00% <= 3 milliseconds
+45977.01 requests per second
+
+GET: 46820.89GET: 44962.14GET: 43982.37GET: 42986.54GET: 43159.32GET: 43282.46GET: 43469.69GET: 43621.90GET: 43904.70====== GET ======
+  100000 requests completed in 2.27 seconds
+  50 parallel clients
+  5000 bytes payload
+  keep alive: 1
+
+98.02% <= 1 milliseconds
+99.89% <= 2 milliseconds
+99.90% <= 5 milliseconds
+99.93% <= 6 milliseconds
+99.95% <= 7 milliseconds
+99.98% <= 8 milliseconds
+100.00% <= 8 milliseconds
+43975.38 requests per second
+
+
