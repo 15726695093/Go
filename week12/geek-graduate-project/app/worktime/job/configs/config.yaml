@@ -1,0 +1,12 @@
+server:
+  http:
+    addr: 0.0.0.0:8000
+    timeout: 1s
+  grpc:
+    addr: 0.0.0.0:9005
+    timeout: 1s
+data:
+  rabbitmq:
+    addr: amqp://root:000000@127.0.0.1:5672/
+  workTimeClient:
+    addr: 127.0.0.1:9003

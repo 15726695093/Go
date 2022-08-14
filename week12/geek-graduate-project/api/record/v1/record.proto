@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package api.record.v1;
+
+option go_package = "clock-in/./api/record/v1;v1";
+option java_multiple_files = true;
+option java_package = "..api.record.v1";
+
+service RecordService {
+	rpc ClockInOnWork(ClockInOnWorkRequest) returns (ClockInOnWorkReply) {};
+	rpc ClockInOffWork(ClockInOffWorkRequest) returns (ClockInOffWorkReply) {};
+}
+
+message ClockInOnWorkRequest {
+	int64 user = 1;
+}
+
+message ClockInOnWorkReply {}
+
+
+message ClockInOffWorkRequest {
+	int64 user = 1;
+}
+
+message ClockInOffWorkReply {}
+

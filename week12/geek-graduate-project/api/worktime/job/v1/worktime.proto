@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package api.worktime.job.v1;
+
+option go_package = "clock-in/api/worktime/job/v1;v1";
+option java_multiple_files = true;
+option java_package = "api.worktime.job.v1";
+
+service Worktime {
+	rpc CreateWorktime (CreateWorktimeRequest) returns (CreateWorktimeReply);
+	rpc UpdateWorktime (UpdateWorktimeRequest) returns (UpdateWorktimeReply);
+	rpc DeleteWorktime (DeleteWorktimeRequest) returns (DeleteWorktimeReply);
+	rpc GetWorktime (GetWorktimeRequest) returns (GetWorktimeReply);
+	rpc ListWorktime (ListWorktimeRequest) returns (ListWorktimeReply);
+}
+
+message CreateWorktimeRequest {}
+message CreateWorktimeReply {}
+
+message UpdateWorktimeRequest {}
+message UpdateWorktimeReply {}
+
+message DeleteWorktimeRequest {}
+message DeleteWorktimeReply {}
+
+message GetWorktimeRequest {}
+message GetWorktimeReply {}
+
+message ListWorktimeRequest {}
+message ListWorktimeReply {}

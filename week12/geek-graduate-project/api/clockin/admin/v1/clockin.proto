@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+package api.clockin.admin.v1;
+import "google/api/annotations.proto";
+
+option go_package = "clock-in/api/clockin/admin/v1;v1";
+option java_multiple_files = true;
+option java_package = "api.clockin.admin.v1";
+
+service ClockinAdminService {
+	rpc GetWorkTime (GetWorkTimeRequest) returns (GetWorkTimeReply) {
+		option (google.api.http) = {
+			post: "/api/admin/clockin/v1/getWorkTime"
+			body: "*"
+		};
+	};
+}
+
+message WorkTime {
+	int64 day = 1;
+	int64 minute = 2;
+}
+
+message UserWorkTime {
+	int64 user = 1;
+	repeated WorkTime worktime = 2;
+}
+
+message GetWorkTimeRequest {
+	repeated int64 user = 1;
+	repeated int64 day = 2;
+}
+message GetWorkTimeReply {
+	repeated UserWorkTime data = 1;
+}
+

@@ -1,0 +1,62 @@
+syntax = "proto3";
+
+package api.clockin.interface.v1;
+import "google/api/annotations.proto";
+
+option go_package = "clock-in/api/clockin/interface/v1;v1";
+option java_multiple_files = true;
+option java_package = "api.clockin.interface.v1";
+
+service ClockinInterface {
+	rpc Register(RegisterRequest) returns (RegisterReply) {
+		option (google.api.http) = {
+			post: "/api/clockin/v1/register"
+			body: "*"
+		};
+	}
+	rpc Login(LoginRequest) returns (LoginReply) {
+		option (google.api.http) = {
+			post: "/api/clockin/v1/login"
+			body: "*"
+		};
+	};
+	rpc ClockinOnWork(ClockinOnWorkRequest) returns (ClockinOnWorkReply) {
+		option (google.api.http) = {
+			get: "/api/clockin/v1/onwork"
+		};
+	};
+	rpc ClockinOffWork(ClockinOffWorkRequest) returns (ClockinOffWorkReply) {
+		option (google.api.http) = {
+			get: "/api/clockin/v1/offwork"
+		};
+	};
+}
+
+message RegisterRequest {
+	string name = 1;
+	string password = 2;
+	string phone = 3;
+}
+
+message RegisterReply {
+	int64 id = 1;
+	string name = 2;
+	string phone = 3;
+}
+
+message LoginRequest {
+	string username = 1;
+	string password = 2;
+}
+
+message LoginReply {
+	string token = 1;
+}
+
+message ClockinOnWorkRequest {}
+
+message ClockinOnWorkReply {}
+
+message ClockinOffWorkRequest {}
+
+message ClockinOffWorkReply {}

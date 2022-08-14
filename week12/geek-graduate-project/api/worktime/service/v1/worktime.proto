@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+package api.worktime.service.v1;
+
+option go_package = "clock-in/api/worktime/service/v1;v1";
+option java_multiple_files = true;
+option java_package = "api.worktime.service.v1";
+
+service WorktimeService {
+	rpc GetUserWorkTime (GetUserWorkTimeRequest) returns (GetUserWorkTimeReply);
+	rpc CreateWorkTime (CreateWorkTimeRequest) returns (CreateWorkTimeReply);
+}
+
+message WorkTime {
+	int64 id = 1;
+	int64 day = 2;
+	int64 minute = 3;
+}
+
+message Record {
+	int64 day = 1;
+	int64 user = 2;
+	int64 moment = 3;
+}
+
+message GetUserWorkTimeRequest {
+	int64 user = 1;
+	repeated int64 day = 2;
+}
+message GetUserWorkTimeReply {
+	repeated WorkTime worktime = 1;
+}
+
+message CreateWorkTimeRequest {
+	int64 user = 1;
+	repeated Record record = 2;
+}
+message CreateWorkTimeReply {}

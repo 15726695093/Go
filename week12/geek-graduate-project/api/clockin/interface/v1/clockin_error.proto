@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package api.clockin.interface.v1;
+import "errors/errors.proto";
+
+option go_package = "clock-in/api/clockin/interface/v1;v1";
+option java_multiple_files = true;
+option java_package = "api.clockin.interface.v1";
+
+
+enum ClockinInterfaceErrorReason {
+	option (errors.default_code) = 500;
+
+	UNKNOWN_ERROR = 0;
+	USER_NOT_FOUND = 1 [(errors.code) = 404];
+	PASSWORD_INCORRECT = 2 [(errors.code) = 401];
+	USER_EXISTED_ERROR = 3 [(errors.code) = 406];
+	RECORD_EXISTED = 4 [(errors.code) = 406];
+}

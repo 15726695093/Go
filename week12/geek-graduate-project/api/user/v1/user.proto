@@ -1,0 +1,57 @@
+syntax = "proto3";
+
+package api.user.v1;
+
+option go_package = "clock-in/api/user/v1;v1";
+option java_multiple_files = true;
+option java_package = "api.user.v1";
+
+service UserService {
+	rpc GetUserById (GetUserByIdRequest) returns (GetUserByIdReply);
+	rpc GetUserByName (GetUserByNameRequest) returns (GetUserByNameReply);
+	rpc SearchUserByName (SearchUserByNameRequest) returns (SearchUserByNameReply);
+	rpc SaveUser (SaveUserRequest) returns (SaveUserReply);
+	rpc RemoveUser (RemoveUserRequest) returns (RemoveUserReply);
+}
+
+message User {
+	int64 id = 1;
+	string name = 2;
+	string password = 3;
+	string phone = 4;
+}
+
+message GetUserByIdRequest {
+	repeated int64 id = 1;
+}
+message GetUserByIdReply {
+	repeated User user = 1;
+}
+
+message GetUserByNameRequest {
+	string name = 1;
+}
+
+message GetUserByNameReply {
+	User user = 1;
+}
+
+message SearchUserByNameRequest {
+	string name = 1;
+}
+message SearchUserByNameReply {
+	repeated User user = 1;
+}
+
+message SaveUserRequest {
+	User user = 1;
+}
+message SaveUserReply {
+	User user = 1;
+}
+
+message RemoveUserRequest {
+	repeated int64 id = 1;
+}
+
+message RemoveUserReply {}
